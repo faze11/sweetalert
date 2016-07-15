@@ -53,6 +53,19 @@ var setParameters = function(params) {
   }
 
   /*
+  * Passive Modal
+   */
+  if (params.passive) {
+    // add passive class to modal
+    addClass(modal, 'passive-modal');
+    modal.setAttribute('data-passive-class', 'passive-modal');
+  } else {
+    // Remove passive class from previous modals
+    let customClass = modal.getAttribute('data-passive-class');
+    removeClass(modal, customClass);
+    modal.setAttribute('data-passive-class', '');
+  }
+  /*
    * Icon
    */
   hide(modal.querySelectorAll('.sa-icon'));

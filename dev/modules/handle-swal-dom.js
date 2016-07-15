@@ -64,8 +64,12 @@ var setFocusStyle = function($button, bgColor) {
  */
 var openModal = function(callback) {
   var $modal = getModal();
-  fadeIn(getOverlay(), 10);
+  // only show overlay if not passive
+  if($modal.getAttribute('data-passive-class') != 'passive-modal')
+    fadeIn(getOverlay(), 10);
+
   show($modal);
+
   addClass($modal, 'showSweetAlert');
   removeClass($modal, 'hideSweetAlert');
 

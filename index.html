@@ -81,6 +81,23 @@
 		<pre><span class="attr">swal</span>(<span class="str">"Good job!"</span>, <span class="str">"You clicked the button!"</span>, <span class="str">"success"</span>)</pre>
 	</li>
 
+	<li class="passive-success">
+		<div class="ui">
+			<p>A passive success message!</p>
+			<button>Try me!</button>
+		</div>
+		<pre><span class="attr">swal</span>({
+&nbsp;&nbsp;title: <span class="str">"Good job!"</span>,
+&nbsp;&nbsp;text: <span class="str">"You clicked the button!"</span>,
+&nbsp;&nbsp;type: <span class="str">"success"</span>,
+&nbsp;&nbsp;passive: <span class="val">true</span>,
+&nbsp;&nbsp;showConfirmButton: <span class="val">false</span>,
+&nbsp;&nbsp;timer: <span class="val">2000</span>,
+});</pre>
+
+	</li>
+
+
 	<li class="warning confirm">
 		<div class="ui">
 			<p>A warning message, with a function attached to the "Confirm"-button...</p>
@@ -291,6 +308,11 @@
 		<td><i>null</i></td>
 		<td>The type of the modal. SweetAlert comes with 4 built-in types which will show a corresponding icon animation: "<strong>warning</strong>", "<strong>error</strong>", "<strong>success</strong>" and "<strong>info"</strong>. You can also set it as "<strong>input</strong>" to get a prompt modal. It can either be put in the object under the key "type" or passed as the third parameter of the function.</td>
 	</tr>
+	<tr>
+		<td><b>passive</b></td>
+		<td><i>false</i></td>
+		<td>If set to <strong>true</strong>, a simple message will be displayed in the bottom right corner without an overlay.  No buttons will be available so you must set a timer value in order to hide the alert.</td>
+	</tr>
     <tr>
       <td><b>allowEscapeKey</b></td>
       <td><i>true</i></td>
@@ -440,7 +462,6 @@
 	<span class="te-logo">TE</span> • <script>document.write(new Date().getFullYear())</script>
 </footer>
 
-
 <script>
 
 document.querySelector('button.download').onclick = function(){
@@ -474,6 +495,18 @@ document.querySelector('ul.examples li.title-text button').onclick = function(){
 
 document.querySelector('ul.examples li.success button').onclick = function(){
 	swal("Good job!", "You clicked the button!", "success");
+};
+
+document.querySelector('ul.examples li.passive-success button').onclick = function(){
+	swal({
+		title: "Good job!",
+		text: "You clicked the button!",
+		type: "success",
+		//customClass: 'passive-modal',
+		passive: true,
+		showConfirmButton: false,
+		timer: 2000,
+	});
 };
 
 document.querySelector('ul.examples li.warning.confirm button').onclick = function(){

@@ -68,7 +68,8 @@ var sweetAlert, swal;
 export default sweetAlert = swal = function() {
   var customizations = arguments[0];
 
-  addClass(document.body, 'stop-scrolling');
+  if(!customizations.passive)
+    addClass(document.body, 'stop-scrolling');
   resetInput();
 
   /*

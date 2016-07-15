@@ -488,6 +488,22 @@ body.stop-scrolling {
 
 }
 
+.passive-modal {
+  position: fixed;
+  bottom: 0;
+  right: 0 !important;
+  left: auto;
+  top: auto;
+  margin-bottom: 20px;
+  margin-top: 0px!important;
+  margin-right: 20px;
+  margin-left: 0px!important;
+  width: 400px;
+  padding: 0px;
+  padding-bottom: 10px!important;
+}
+.passive-modal .sa-error-container, .passive-modal .sa-button-container { display: none!important; }
+
 /*
  * Animations
  */
