@@ -500,8 +500,11 @@ body.stop-scrolling {
   margin-left: 0px!important;
   width: 400px;
   padding: 0px;
-  padding-bottom: 10px!important;
+  padding-bottom: 15px!important;
+  background:#FFF;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
+.passive-modal h2 { margin: 15px 0!important; }
 .passive-modal .sa-error-container, .passive-modal .sa-button-container { display: none!important; }
 
 /*
