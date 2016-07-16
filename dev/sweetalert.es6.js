@@ -247,8 +247,11 @@ sweetAlert.close = swal.close = function(callback = null) {
 sweetAlert.showInputError = swal.showInputError = function(errorMessage) {
   var modal = getModal();
 
-  var $errorIcon = modal.querySelector('.sa-input-error');
-  addClass($errorIcon, 'show');
+  // only show input error icon if input is visible
+  if(modal.querySelector('input').offsetParent !== null) {
+    var $errorIcon = modal.querySelector('.sa-input-error');
+    addClass($errorIcon, 'show');
+  }
 
   var $errorContainer = modal.querySelector('.sa-error-container');
   addClass($errorContainer, 'show');
