@@ -435,8 +435,8 @@
 	</tr>
 	<tr>
 		<td>close</td>
-		<td><i>swal.close();</i></td>
-		<td>Close the currently open SweetAlert programatically.</td>
+		<td><i>swal.close(callback);</i></td>
+		<td>Close the currently open SweetAlert programatically.  Since the close function hides the modal with a timeout, you can optionally set a callback to execute code when the modal is finally closed.  This is helpful if you are going to show a passive modal after the close function is called.</td>
 	</tr>
 	<tr>
 		<td>showInputError</td>
