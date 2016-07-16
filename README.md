@@ -5,7 +5,7 @@ An awesome replacement for JavaScript's alert.
 
 ![A success modal](https://raw.github.com/t4t5/sweetalert/master/sweetalert.gif)
 
-[See it in action!](http://t4t5.github.io/sweetalert)
+[See it in action!](http://faze11.github.io/sweetalert)
 
 [Learn how to use it!](https://www.ludu.co/lesson/how-to-use-sweetalert)
 
