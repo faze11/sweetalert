@@ -193,11 +193,11 @@ sweetAlert.setDefaults = swal.setDefaults = function(userParams) {
 /*
  * Animation when closing modal
  */
-sweetAlert.close = swal.close = function() {
+sweetAlert.close = swal.close = function(callback = null) {
   var modal = getModal();
 
   fadeOut(getOverlay(), 5);
-  fadeOut(modal, 5);
+  fadeOut(modal, 5, callback);
   removeClass(modal, 'showSweetAlert');
   addClass(modal, 'hideSweetAlert');
   removeClass(modal, 'visible');

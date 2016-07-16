@@ -99,7 +99,7 @@ var fadeIn = function(elem, interval) {
   elem.style.display = 'block'; //fallback IE8
 };
 
-var fadeOut = function(elem, interval) {
+var fadeOut = function(elem, interval, callback = null) {
   interval = interval || 16;
   elem.style.opacity = 1;
   var last = +new Date();
@@ -111,6 +111,7 @@ var fadeOut = function(elem, interval) {
       setTimeout(tick, interval);
     } else {
       elem.style.display = 'none';
+      if(callback !== null) callback();
     }
   };
   tick();
